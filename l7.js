@@ -44,11 +44,8 @@ function addCat() {
 // });
 
 $(document).on('click', '.itembox button', function (e) {
-    console.log($(this).parent().index());
     cats.splice($(this).parent().index(), 1);
     $(this).parent().remove();
-    console.log(cats);
     var catsStr = JSON.stringify(cats);
-    console.log(catsStr);
     localStorage.setItem('cats', catsStr);
 });
